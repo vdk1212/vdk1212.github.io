@@ -8,6 +8,7 @@ $(document).ready(function(){
 		$('#regulamin').addClass('non')
 		$('#studio').removeClass('non')
 		$('#galeria').removeClass('non');
+		$('.hidden-content').removeClass('non');
 	})
 
 	/*USUŃ TATUAŻ*/
@@ -17,7 +18,8 @@ $(document).ready(function(){
 		$('#regulamin').addClass('non')
 		$('#usun-tatuaz').removeClass('non')
 		$('#studio').addClass('non')
-		$('#galeria').addClass('non');
+		$('#galeria').addClass('non')
+		$('.hidden-content').addClass('non');
 	})
 
 	//REGULAMIN
@@ -27,7 +29,8 @@ $(document).ready(function(){
 		$('#usun-tatuaz').addClass('non')
 		$('#regulamin').removeClass('non')
 		$('#studio').addClass('non')
-		$('#galeria').addClass('non');
+		$('#galeria').addClass('non')
+		$('.hidden-content').addClass('non');
 	})
 	//MENU
 	$('#menu-button').click(function(){
