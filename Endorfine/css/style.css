@@ -1728,9 +1728,9 @@ footer p span {
   .active-hex-4-5,
   .active-hex-6-8,
   .active-hex-9-11 {
-    -webkit-box-shadow: -60px 70px 10px -65px rgba(0, 0, 0, 0.75), 50px60px -66px 10px -65px rgba(0, 0, 0, 0.75) !important;
-       -moz-box-shadow: -60px 70px 10px -65px rgba(0, 0, 0, 0.75), 50px60px -66px 10px -65px rgba(0, 0, 0, 0.75) !important;
-            box-shadow: -60px 70px 10px -65px rgba(0, 0, 0, 0.75), 50px60px -66px 10px -65px rgba(0, 0, 0, 0.75) !important;
+    -webkit-box-shadow: -60px 70px 10px -65px rgba(0, 0, 0, 0.75), 60px -66px 10px -65px rgba(0, 0, 0, 0.75) !important;
+       -moz-box-shadow: -60px 70px 10px -65px rgba(0, 0, 0, 0.75), 60px -66px 10px -65px rgba(0, 0, 0, 0.75) !important;
+            box-shadow: -60px 70px 10px -65px rgba(0, 0, 0, 0.75), 60px -66px 10px -65px rgba(0, 0, 0, 0.75) !important;
   }
 }
 
