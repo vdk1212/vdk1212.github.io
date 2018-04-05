@@ -10,16 +10,14 @@
 </head>
 <body>
 	<header>
-		<nav class="navbar navbar-expand-lg navbar-light justify-content-between">
+		<nav class="navbar justify-content-between">
 	
-			<div class="col-lg-2 col-md-2">
-				<a class="navbar-brand" href="#">
-					<h1 class="non">Y Group Companies</h1>
-					<img src="img/logo.png" alt="logo">
-				</a>
-			</div>
+			<a class="navbar-brand transition" href="#">
+				<h1 class="non">Y Group Companies</h1>
+				<img src="img/logo.png" alt="logo">
+			</a>
 	
-			<ul class="nav justify-content-center">
+			<ul class="nav justify-content-center fade-in-down">
 				<li class="nav-item">
 					<a class="nav-link text-grey font-medium transition" href="#">Team</a>
 				</li>
@@ -31,11 +29,11 @@
 				</li>
 			</ul>
 	
-			<div class="collapse navbar-collapse" id="navbarSupportedContent">
-				<ul class="navbar-nav  justify-content-center">
+			<div class="collapse navbar-collapse fade-in-down" id="navbarSupportedContent">
+				<ul class="navbar-nav justify-content-center align-items-center flex-md-row flex-column fade-in">
 	
-					<li class="nav-item active">
-						<a class="nav-link text-white font-medium transition" href="#">AboutY<span class="sr-only">(current)</span></a>
+					<li class="nav-item">
+						<a class="nav-link text-white font-medium transition" href="#">AboutY</a>
 					</li>
 					
 					<li class="nav-item">
@@ -54,7 +52,7 @@
 						<a class="nav-link text-white font-medium transition" href="#">Careers</a>
 					</li>
 	
-					<li class="nav-item">
+					<li class="nav-item active">
 						<a class="nav-link text-white font-medium transition" href="#">Work@Y</a>
 					</li>
 	
@@ -75,24 +73,24 @@
 		<h2 class="font-black text-center text-grey text-uppercase">Events</h2>
 		<div class="container">
 			<div class="row">
-				<div class="col-lg-8 col-md-8">
-					<ul class="nav justify-content-end">
+				<div class="col-lg-8 col-md-12 col-12">
+					<ul class="nav justify-content-lg-end justify-content-center">
 						<li class="nav-item active">
-							<a class="nav-link text-grey transition" href="#">Amsterdam</a>
+							<a class="nav-link text-grey text-center transition" href="#">Amsterdam</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-grey transition" href="#">Barcelona</a>
+							<a class="nav-link text-grey text-center transition" href="#">Barcelona</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-grey transition" href="#">Madrid</a>
+							<a class="nav-link text-grey text-center transition" href="#">Madrid</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link text-grey transition" href="#">New York</a>
+							<a class="nav-link text-grey text-center transition" href="#">New York</a>
 						</li>
 					</ul>
 				</div>
-				<div class="col-lg-4 col-md-4">
-					<div class="nav">
+				<div class="col-lg-4 col-md-12 col-12">
+					<div class="nav justify-content-lg-start justify-content-center">
 		
 						<div>
 							<div class="nav-item text-grey transition">Date
@@ -124,8 +122,167 @@
 				
 				<article class="event col-12 bg-white">
 					<div class="row">
-						<div class="event-pic col-lg-4 col-md-4">
+						<div class="event-pic col-lg-4 col-md-12 justify-content-center">
 							<div style="background-image: url(img/event.jpg);"></div>
+							<div class="event-mobile event-info transition">
+								<p class="text-uppercase font-bold transition">Event name</p>
+								<p class="transition">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam est ducimus fuga tempora quidem maxime! Similique ratione nihil, nesciunt, quidem iusto at officia esse consequatur, aut tempore libero voluptates quaerat iure fugit asperiores necessitatibus...</p>
+								<div class="social transition">
+									<a href="#"><span class="fa fa-linkedin text-white rounded-circle transition" aria-hidden="true"></span></a>
+									<a href="#"><span class="fa fa-facebook text-white rounded-circle transition" aria-hidden="true"></span></a>
+									<a href="#"><span class="fa fa-twitter text-white rounded-circle transition" aria-hidden="true"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="event-info">
+							<h1 class="text-uppercase text-grey font-bold">Event name</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam est ducimus fuga tempora quidem maxime! Similique ratione nihil, nesciunt, quidem iusto at officia esse consequatur, aut tempore libero voluptates quaerat iure fugit asperiores necessitatibus...</p>
+							<div class="social">
+								<a href="#"><span class="fa fa-linkedin text-white rounded-circle transition" aria-hidden="true"></span></a>
+								<a href="#"><span class="fa fa-facebook text-white rounded-circle transition" aria-hidden="true"></span></a>
+								<a href="#"><span class="fa fa-twitter text-white rounded-circle transition" aria-hidden="true"></span></a>
+							</div>
+						</div>
+						<div class="event-date">
+							<p class="text-grey"><span></span>June 15, 2018</p>
+							<p class="text-grey"><span></span>Free</p>
+							<p class="text-grey"><span></span>13:00 - 14:00</p>
+							<div class="col-12">
+								<button type="button" class="black-btn text-white transition">Add to calendar</button>
+								<ul class="event-calendar-list list-unstyled fade-in">
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-google transition" aria-hidden="true"></span>Google calendar</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-apple transition" aria-hidden="true"></span>Apple calendar</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-outlook transition" aria-hidden="true"></span>Outlook.com</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-calendar-o transition" aria-hidden="true"></span>Other calendar</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</article>
+		
+				<article class="event col-12 bg-white">
+					<div class="row">
+						<div class="event-pic col-lg-4 col-md-12 justify-content-center">
+							<div></div>
+							<div class="event-mobile event-info transition">
+								<p class="text-uppercase font-bold transition">Long event name</p>
+								<p class="transition">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam est ducimus fuga tempora quidem maxime! Similique ratione nihil, nesciunt, quidem iusto at officia esse consequatur, aut tempore libero voluptates quaerat iure fugit asperiores necessitatibus...</p>
+								<div class="social transition">
+									<a href="#"><span class="fa fa-linkedin text-white rounded-circle transition" aria-hidden="true"></span></a>
+									<a href="#"><span class="fa fa-facebook text-white rounded-circle transition" aria-hidden="true"></span></a>
+									<a href="#"><span class="fa fa-twitter text-white rounded-circle transition" aria-hidden="true"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="event-info">
+							<h1 class="text-uppercase text-grey font-bold">Long event name</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam est ducimus fuga tempora quidem maxime! Similique ratione nihil, nesciunt, quidem iusto at officia esse consequatur, aut tempore libero voluptates quaerat iure fugit asperiores necessitatibus...</p>
+							<div class="social">
+								<a href="#"><span class="fa fa-linkedin text-white rounded-circle transition" aria-hidden="true"></span></a>
+								<a href="#"><span class="fa fa-facebook text-white rounded-circle transition" aria-hidden="true"></span></a>
+								<a href="#"><span class="fa fa-twitter text-white rounded-circle transition" aria-hidden="true"></span></a>
+							</div>
+						</div>
+						<div class="event-date">
+							<p class="text-grey"><span></span>June 15, 2018</p>
+							<p class="text-grey"><span></span>Free</p>
+							<p class="text-grey"><span></span>13:00 - 14:00</p>
+							<div class="col-12">
+								<button type="button" class="black-btn text-white transition">Add to calendar</button>
+								<ul class="event-calendar-list list-unstyled fade-in">
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-google transition" aria-hidden="true"></span>Google calendar</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-apple transition" aria-hidden="true"></span>Apple calendar</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-outlook transition" aria-hidden="true"></span>Outlook.com</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-calendar-o transition" aria-hidden="true"></span>Other calendar</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</article>
+		
+				<article class="event col-12 bg-white">
+					<div class="row">
+						<div class="event-pic col-lg-4 col-md-12 justify-content-center">
+							<div></div>
+							<div class="event-mobile event-info transition">
+								<p class="text-uppercase font-bold transition">Much longer event name</p>
+								<p class="transition">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam est ducimus fuga tempora quidem maxime! Similique ratione nihil, nesciunt, quidem iusto at officia esse consequatur...</p>
+								<div class="social transition">
+									<a href="#"><span class="fa fa-linkedin text-white rounded-circle transition" aria-hidden="true"></span></a>
+									<a href="#"><span class="fa fa-facebook text-white rounded-circle transition" aria-hidden="true"></span></a>
+									<a href="#"><span class="fa fa-twitter text-white rounded-circle transition" aria-hidden="true"></span></a>
+								</div>
+							</div>
+						</div>
+						<div class="event-info">
+							<h1 class="text-uppercase text-grey font-bold">Much longer event name</h1>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam est ducimus fuga tempora quidem maxime! Similique ratione nihil, nesciunt, quidem iusto at officia esse consequatur...</p>
+							<div class="social">
+								<a href="#"><span class="fa fa-linkedin text-white rounded-circle transition" aria-hidden="true"></span></a>
+								<a href="#"><span class="fa fa-facebook text-white rounded-circle transition" aria-hidden="true"></span></a>
+								<a href="#"><span class="fa fa-twitter text-white rounded-circle transition" aria-hidden="true"></span></a>
+							</div>
+						</div>
+						<div class="event-date">
+							<p class="text-grey"><span></span>June 15, 2018</p>
+							<p class="text-grey"><span></span>Free</p>
+							<p class="text-grey"><span></span>13:00 - 14:00</p>
+							<div class="col-12">
+								<button type="button" class="black-btn text-white transition">Add to calendar</button>
+								<ul class="event-calendar-list list-unstyled fade-in">
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-google transition" aria-hidden="true"></span>Google calendar</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-apple transition" aria-hidden="true"></span>Apple calendar</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-outlook transition" aria-hidden="true"></span>Outlook.com</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-calendar-o transition" aria-hidden="true"></span>Other calendar</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</article>
+		
+			</div>
+		</section>
+		<section id="jully-2018">
+			<h3 class="text-uppercase text-center">Jully 2018</h3>
+			<div class="container">
+				
+				<article class="event col-12 bg-white">
+					<div class="row">
+						<div class="event-pic col-lg-4 col-md-12 justify-content-center">
+							<div style="background-image: url(img/event.jpg);"></div>
+							<div class="event-mobile event-info transition">
+								<p class="text-uppercase font-bold transition">Event name</p>
+								<p class="transition">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam est ducimus fuga tempora quidem maxime! Similique ratione nihil, nesciunt, quidem iusto at officia esse consequatur, aut tempore libero voluptates quaerat iure fugit asperiores necessitatibus...</p>
+								<div class="social transition">
+									<a href="#"><span class="fa fa-linkedin text-white rounded-circle transition" aria-hidden="true"></span></a>
+									<a href="#"><span class="fa fa-facebook text-white rounded-circle transition" aria-hidden="true"></span></a>
+									<a href="#"><span class="fa fa-twitter text-white rounded-circle transition" aria-hidden="true"></span></a>
+								</div>
+							</div>
 						</div>
 						<div class="event-info">
 							<h1 class="text-uppercase text-grey font-bold">Event name</h1>
@@ -143,10 +300,18 @@
 							<div class="col-12">
 								<button type="button" class="black-btn text-white">Add to calendar</button>
 								<ul class="event-calendar-list list-unstyled fade-in">
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-google transition" aria-hidden="true"></span>Google calendar</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-apple transition" aria-hidden="true"></span>Apple calendar</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-outlook transition" aria-hidden="true"></span>Outlook.com</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-calendar-o transition" aria-hidden="true"></span>Other calendar</a></li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-google transition" aria-hidden="true"></span>Google calendar</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-apple transition" aria-hidden="true"></span>Apple calendar</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-outlook transition" aria-hidden="true"></span>Outlook.com</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-calendar-o transition" aria-hidden="true"></span>Other calendar</a>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -155,8 +320,17 @@
 		
 				<article class="event col-12 bg-white">
 					<div class="row">
-						<div class="event-pic col-lg-4 col-md-4">
+						<div class="event-pic col-lg-4 col-md-12 justify-content-center">
 							<div></div>
+							<div class="event-mobile event-info transition">
+								<p class="text-uppercase font-bold transition">Long event name</p>
+								<p class="transition">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam est ducimus fuga tempora quidem maxime! Similique ratione nihil, nesciunt, quidem iusto at officia esse consequatur, aut tempore libero voluptates quaerat iure fugit asperiores necessitatibus...</p>
+								<div class="social transition">
+									<a href="#"><span class="fa fa-linkedin text-white rounded-circle transition" aria-hidden="true"></span></a>
+									<a href="#"><span class="fa fa-facebook text-white rounded-circle transition" aria-hidden="true"></span></a>
+									<a href="#"><span class="fa fa-twitter text-white rounded-circle transition" aria-hidden="true"></span></a>
+								</div>
+							</div>
 						</div>
 						<div class="event-info">
 							<h1 class="text-uppercase text-grey font-bold">Long event name</h1>
@@ -174,10 +348,18 @@
 							<div class="col-12">
 								<button type="button" class="black-btn text-white">Add to calendar</button>
 								<ul class="event-calendar-list list-unstyled fade-in">
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-google transition" aria-hidden="true"></span>Google calendar</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-apple transition" aria-hidden="true"></span>Apple calendar</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-outlook transition" aria-hidden="true"></span>Outlook.com</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-calendar-o transition" aria-hidden="true"></span>Other calendar</a></li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-google transition" aria-hidden="true"></span>Google calendar</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-apple transition" aria-hidden="true"></span>Apple calendar</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-outlook transition" aria-hidden="true"></span>Outlook.com</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-calendar-o transition" aria-hidden="true"></span>Other calendar</a>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -186,8 +368,17 @@
 		
 				<article class="event col-12 bg-white">
 					<div class="row">
-						<div class="event-pic col-lg-4 col-md-4">
+						<div class="event-pic col-lg-4 col-md-12 justify-content-center">
 							<div></div>
+							<div class="event-mobile event-info transition">
+								<p class="text-uppercase font-bold transition">Much longer event name</p>
+								<p class="transition">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam est ducimus fuga tempora quidem maxime! Similique ratione nihil, nesciunt, quidem iusto at officia esse consequatur...</p>
+								<div class="social transition">
+									<a href="#"><span class="fa fa-linkedin text-white rounded-circle transition" aria-hidden="true"></span></a>
+									<a href="#"><span class="fa fa-facebook text-white rounded-circle transition" aria-hidden="true"></span></a>
+									<a href="#"><span class="fa fa-twitter text-white rounded-circle transition" aria-hidden="true"></span></a>
+								</div>
+							</div>
 						</div>
 						<div class="event-info">
 							<h1 class="text-uppercase text-grey font-bold">Much longer event name</h1>
@@ -205,109 +396,18 @@
 							<div class="col-12">
 								<button type="button" class="black-btn text-white">Add to calendar</button>
 								<ul class="event-calendar-list list-unstyled fade-in">
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-google transition" aria-hidden="true"></span>Google calendar</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-apple transition" aria-hidden="true"></span>Apple calendar</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-outlook transition" aria-hidden="true"></span>Outlook.com</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-calendar-o transition" aria-hidden="true"></span>Other calendar</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</article>
-		
-			</div>
-		</section>
-		<section id="jully-2018">
-			<h3 class="text-uppercase text-center">Jully 2018</h3>
-			<div class="container">
-				
-				<article class="event col-12 bg-white">
-					<div class="row">
-						<div class="event-pic col-lg-4 col-md-4">
-							<div style="background-image: url(img/event.jpg);"></div>
-						</div>
-						<div class="event-info">
-							<h1 class="text-uppercase font-bold">Event name</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam est ducimus fuga tempora quidem maxime! Similique ratione nihil, nesciunt, quidem iusto at officia esse consequatur, aut tempore libero voluptates quaerat iure fugit asperiores necessitatibus...</p>
-							<div class="social">
-								<a href="#"><span class="fa fa-facebook text-white rounded-circle transition" aria-hidden="true"></span></a>
-								<a href="#"><span class="fa fa-linkedin text-white rounded-circle transition" aria-hidden="true"></span></a>
-								<a href="#"><span class="fa fa-twitter text-white rounded-circle transition" aria-hidden="true"></span></a>
-							</div>
-						</div>
-						<div class="event-date">
-							<p class="text-grey"><span></span>June 15, 2018</p>
-							<p class="text-grey"><span></span>Free</p>
-							<p class="text-grey"><span></span>13:00 - 14:00</p>
-							<div class="col-12">
-								<button type="button" class="black-btn text-white">Add to calendar</button>
-								<ul class="event-calendar-list list-unstyled fade-in">
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-google transition" aria-hidden="true"></span>Google calendar</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-apple transition" aria-hidden="true"></span>Apple calendar</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-outlook transition" aria-hidden="true"></span>Outlook.com</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-calendar-o transition" aria-hidden="true"></span>Other calendar</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</article>
-		
-				<article class="event col-12 bg-white">
-					<div class="row">
-						<div class="event-pic col-lg-4 col-md-4">
-							<div></div>
-						</div>
-						<div class="event-info">
-							<h1 class="text-uppercase font-bold">Long event name</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam est ducimus fuga tempora quidem maxime! Similique ratione nihil, nesciunt, quidem iusto at officia esse consequatur, aut tempore libero voluptates quaerat iure fugit asperiores necessitatibus...</p>
-							<div class="social">
-								<a href="#"><span class="fa fa-facebook text-white rounded-circle transition" aria-hidden="true"></span></a>
-								<a href="#"><span class="fa fa-linkedin text-white rounded-circle transition" aria-hidden="true"></span></a>
-								<a href="#"><span class="fa fa-twitter text-white rounded-circle transition" aria-hidden="true"></span></a>
-							</div>
-						</div>
-						<div class="event-date">
-							<p class="text-grey"><span></span>June 15, 2018</p>
-							<p class="text-grey"><span></span>Free</p>
-							<p class="text-grey"><span></span>13:00 - 14:00</p>
-							<div class="col-12">
-								<button type="button" class="black-btn text-white">Add to calendar</button>
-								<ul class="event-calendar-list list-unstyled fade-in">
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-google transition" aria-hidden="true"></span>Google calendar</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-apple transition" aria-hidden="true"></span>Apple calendar</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-outlook transition" aria-hidden="true"></span>Outlook.com</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-calendar-o transition" aria-hidden="true"></span>Other calendar</a></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</article>
-		
-				<article class="event col-12 bg-white">
-					<div class="row">
-						<div class="event-pic col-lg-4 col-md-4">
-							<div></div>
-						</div>
-						<div class="event-info">
-							<h1 class="text-uppercase font-bold">Much longer event name</h1>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit nam est ducimus fuga tempora quidem maxime! Similique ratione nihil, nesciunt, quidem iusto at officia esse consequatur...</p>
-							<div class="social">
-								<a href="#"><span class="fa fa-facebook text-white rounded-circle transition" aria-hidden="true"></span></a>
-								<a href="#"><span class="fa fa-linkedin text-white rounded-circle transition" aria-hidden="true"></span></a>
-								<a href="#"><span class="fa fa-twitter text-white rounded-circle transition" aria-hidden="true"></span></a>
-							</div>
-						</div>
-						<div class="event-date">
-							<p class="text-grey"><span></span>June 15, 2018</p>
-							<p class="text-grey"><span></span>Free</p>
-							<p class="text-grey"><span></span>13:00 - 14:00</p>
-							<div class="col-12">
-								<button type="button" class="black-btn text-white">Add to calendar</button>
-								<ul class="event-calendar-list list-unstyled fade-in">
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-google transition" aria-hidden="true"></span>Google calendar</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-apple transition" aria-hidden="true"></span>Apple calendar</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-outlook transition" aria-hidden="true"></span>Outlook.com</a></li>
-									<li class="bg-white"><a href="#" class="align-items-center transition"><span class="fa fa-calendar-o transition" aria-hidden="true"></span>Other calendar</a></li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-google transition" aria-hidden="true"></span>Google calendar</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-apple transition" aria-hidden="true"></span>Apple calendar</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-outlook transition" aria-hidden="true"></span>Outlook.com</a>
+									</li>
+									<li class="bg-white">
+										<a href="#" class="align-items-center justify-content-lg-start justify-content-center transition"><span class="fa fa-calendar-o transition" aria-hidden="true"></span>Other calendar</a>
+									</li>
 								</ul>
 							</div>
 						</div>
@@ -327,54 +427,53 @@
 		<div class="container">
 			<ul class="nav justify-content-around">
 				<li class="nav-item active">
-					<a class="nav-link font-bold transition" href="#">Amsterdam</a>
+					<a class="nav-link text-center font-bold transition" href="#">Amsterdam</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link font-bold transition" href="#">Barcelona</a>
+					<a class="nav-link text-center font-bold transition" href="#">Barcelona</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link font-bold transition" href="#">Madrid</a>
+					<a class="nav-link text-center font-bold transition" href="#">Madrid</a>
 				</li>
 				<li class="nav-item">
-					<a class="nav-link font-bold transition" href="#">New York</a>
+					<a class="nav-link text-center font-bold transition" href="#">New York</a>
 				</li>
 			</ul>
 		</div>
 		<div>
-			<div class="container">
-				<div class="row justify-content-between">
+			<div class="container flex-lg-row flex-column justify-content-lg-between justify-content-center align-items-center">
 	
-					<div class="col-lg-4 col-md-4 align-items-center">
-						<div class="social">
-							<a href="#">
-								<span class="fa fa-linkedin bg-white rounded-circle transition" aria-hidden="true"></span>
-							</a>
-							<a href="#">
-								<span class="fa fa-facebook bg-white rounded-circle transition" aria-hidden="true"></span>
-							</a>
-						</div>
-						<p class="language align-items-center">
-							<a href="#" class="fade-in transition active"><span class="text-white">English</span>
-								<span class="fa fa-caret-up text-white" aria-hidden="true"></span></a>
-								<a href="#" class="fade-in transition non"><span class="text-white">Ukrainian</span></a>
-							</p>
-						</div>
-	
-						<div class="col-lg-2 col-md-2">
-							<a class="footer-brand" href="#">
-								<h1 class="non">Y Group Companies</h1>
-								<img src="img/logo.png" alt="logo">
-							</a>
-						</div>
-	
-						<div class="copyright col-lg-4 col-md-4 justify-content-end align-items-center">
-							<p class="text-uppercase text-white">© Ygroup companies 2018</p>
-						</div>
-	
+				<div class="col-lg-4 col-md-5 col-10 justify-content-lg-start justify-content-center align-items-center">
+					<div class="social">
+						<a href="#">
+							<span class="fa fa-linkedin bg-white rounded-circle transition" aria-hidden="true"></span>
+						</a>
+						<a href="#">
+							<span class="fa fa-facebook bg-white rounded-circle transition" aria-hidden="true"></span>
+						</a>
 					</div>
+					<p class="language align-items-center">
+						<a href="#" class="fade-in transition active"><span class="text-white">English</span></a>
+						<a href="#" class="fade-in transition non"><span class="text-white">Ukrainian</span></a>
+						<span class="fa fa-caret-up justify-content-center align-items-center text-white" aria-hidden="true"></span>
+					</p>
 				</div>
+	
+				<div class="col-lg-2 col-md-3 col-sm-4 col-6">
+					<a class="footer-brand" href="#">
+						<img src="img/logo.png" alt="logo">
+					</a>
+				</div>
+	
+				<div class="copyright col-lg-4 col-md-5 col-10 justify-content-lg-end justify-content-center align-items-center">
+					<p class="text-uppercase text-white">© Ygroup companies 2018</p>
+				</div>
+	
 			</div>
-		</footer>
-	<!-- //= includes/scripts.html -->
+		</div>
+	</footer>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
 </body>
 </html>
