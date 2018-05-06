@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+   
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>ILM</title>
+    
+    <style>
+        #loader-wrapper {position: fixed;left: 0;top: -100px;right: 0;bottom: -100px;background: #fff;z-index: 100;}
+        body:not(.mobile)::-webkit-scrollbar {width: 8px;}
+        body:not(.mobile)::-webkit-scrollbar-track {background: rgba(192, 192, 192, .7); width: 3px;}
+        body:not(.mobile)::-webkit-scrollbar-thumb {background: linear-gradient(to bottom,#015a9e 0,#0177d1 51%,#015a9e 100%);width: 3px;}
+    </style>
+    
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div id="loader-wrapper"></div>
+    <div id="content-block">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 headerFlex">
+                        <div class="logo">
+                            <a href="index.html" class="imgWrapper"><img src="img/logo.png" alt="logo"></a>
+                        </div>
+                        <div class="hamburger hidden-lg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="headerNav">
+                            <nav>
+                                <ul>
+                                    <li class="dropDown">
+                                        <p class="active">Про нас</p>
+                                        <i></i>
+                                        <ul>
+                                            <li>
+                                                <a href="about.html">
+                                                  <span class="imgWrapper">
+                                                   <img src="svg/newspaper.svg" alt="newspaper icon">
+                                               </span>
+                                               <span>Про ІЛУ</span>
+                                           </a>
+                                       </li>
+                                       <li>
+                                          <a href="about.html">
+                                            <span class="imgWrapper">
+                                               <img src="svg/graduation-cap.svg" alt="graduation cap icon">
+                                           </span>
+                                           <span>Напрямки ІЛУ</span>
+                                       </a>
+                                   </li>
+                                   <li>
+                                    <a href="about.html">
+                                      <span class="imgWrapper">
+                                         <img src="svg/banknote.svg" alt="banknote icon">
+                                     </span>
+                                     <span>Підтримай ІЛУ</span>
+                                 </a>
+                             </li>
+                         </ul>
+                     </li>
+                     <li><a href="programs.html">Програми ІЛУ</a></li>
+                     <li><a href="community.html">Спільнота ІЛУ</a></li>
+                     <li><a href="resource.html">Ресурсний центр</a></li>
+                 </ul>
+             </nav>
+             <div class="headerDetail">
+                <div class="pageLanguage">
+                    <a class="active" href="#">UA</a>
+                    <a href="#">EN</a>
+                </div>
+            </div>
+            <div class="headerSearch">
+                <svg id="search" enable-background="new 0 0 56.966 56.966" version="1.1" viewBox="0 0 56.966 56.966" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m55.146 51.887l-13.558-14.101c3.486-4.144 5.396-9.358 5.396-14.786 0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c0.571 0.593 1.339 0.92 2.162 0.92 0.779 0 1.518-0.297 2.079-0.837 1.192-1.147 1.23-3.049 0.083-4.242zm-31.162-45.887c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"/>
+                </svg>
+                <form class="searchElement">
+                    <div class="wrap">
+                        <svg class="search" enable-background="new 0 0 56.966 56.966" version="1.1" viewBox="0 0 56.966 56.966" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m55.146 51.887l-13.558-14.101c3.486-4.144 5.396-9.358 5.396-14.786 0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c0.571 0.593 1.339 0.92 2.162 0.92 0.779 0 1.518-0.297 2.079-0.837 1.192-1.147 1.23-3.049 0.083-4.242zm-31.162-45.887c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"/>
+                        </svg>
+                        <input type="search" name="search" placeholder="Пошук" class="simpleInput">
+                        <button class="button typeLg" type="button">Пошук</button>
+                        <svg id="close" enable-background="new 0 0 64 64" version="1.1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m28.941 31.786l-28.328 28.328c-0.787 0.787-0.787 2.062 0 2.849 0.393 0.394 0.909 0.59 1.424 0.59 0.516 0 1.031-0.196 1.424-0.59l28.541-28.541 28.541 28.541c0.394 0.394 0.909 0.59 1.424 0.59s1.031-0.196 1.424-0.59c0.787-0.787 0.787-2.062 0-2.849l-28.327-28.328 28.346-28.348c0.787-0.787 0.787-2.062 0-2.849-0.787-0.786-2.062-0.786-2.848 0l-28.559 28.561-28.562-28.56c-0.787-0.786-2.061-0.786-2.848 0-0.787 0.787-0.787 2.062 0 2.849l28.348 28.347z"/>
+                        </svg>
+                    </div>
+                </form>
+            </div>
+            <a href="#" class="button typeXs">Підтримати ІЛУ</a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </header>
+        <section class="programItem">
+            <div class="emptySpace20"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="breadCrumbs small">
+                            <a href="index.html">Головна</a>
+                            <span> >> </span>
+                            <a href="about.html">Програми</a>
+                            <span> >> </span>
+                            <a href="program-item.html">Управління неприбутковими організаціями</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="emptySpace65 emptySpace-sm60 emptySpace-xs50"></div>
+                <div class="programBanner imgRadius" style="background-image: url(img/program.jpg);"></div>
+                <div class="row">
+                    <div class="col-md-6 col-xs-12 simpleArticle">
+                        <div class="emptySpace60 emptySpace-md40 emptySpace-xs25"></div>
+                        <h1 class="h3 as">
+                            <b>Управління неприбутковими організаціями</b>
+                        </h1>
+                        <p class="normall">Магістерська програма з управління неприбутковими організаціями — єдина в Україні навчальна програма такого рівня, створена для тих, хто працює в неприбутковому секторі та прагне поєднати здобуття якісної професійної освіти з роботою.</p>
+                    </div>
+                    <div class="col-md-6 col-xs-12">
+                        <div class="info whiteCard blueDecorAngle">
+                            <div class="emptySpace60 emptySpace-xs30"></div>
+                            <ul>
+                                <li class="normall"><span>Старт нової групи</span><b>22 вересня 2018</b></li>
+                                <li class="normall"><span>Тривалість програми</span><b>1.5 роки</b></li>
+                                <li class="normall"><span>Вартість програми</span><b>50 000 UAH</b></li>
+                            </ul>
+                            <div class="emptySpace30"></div>
+                            <button class="button typeXs" type="button">Зареєструватись</button>
+                            <div class="emptySpace60 emptySpace-xs30"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="emptySpace50"></div>
+                <div class="row tabsBlock">
+                    <!-- Tab menu-START -->
+                    <div class="col-sm-12 col-md-3">
+                        <div class="mobileTabMenu">
+                            <div class="h5 h5 as"><b>Про програму</b> <i></i></div>
+                        </div>
+                        <div class="tabMenuWrapper stickyMenu">
+                            <h5 class="h5 as tabMenu active"><span class="tabLink">Про програму</span></h5>
+                            <h5 class="h5 as tabMenu"><span class="tabLink">Навчальні курси</span></h5>
+                            <h5 class="h5 as tabMenu"><span class="tabLink">Викладачі</span></h5>
+                            <h5 class="h5 as tabMenu"><span class="tabLink">Умови вступу</span></h5>
+                        </div>
+                        <div class="emptySpace-sm65 emptySpace-xs50"></div>
+                    </div>
+                    <!-- Tab menu-END -->
+                    <!-- Tab content wrapper-START -->
+                    <div class="col-sm-12 col-md-9">
+                        <!-- Tab content 1-START -->
+                        <div class="tabEntry" style="display: block;">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <p class="programTabTitle as"><b>На програму варто йти вчитись, якщо ти</b></p>
+                                    <div class="emptySpace20"></div>
+                                    <ul>
+                                        <li>очолюєш неприбуткову організацію, напрямок чи проект;</li>
+                                        <li>шукаєш інструменти та знання для власної соціальної ініціативи;</li>
+                                        <li>громадський активіст, що прагне втілювати системні зміни;</li>
+                                        <li>координуєш соціальний проект в бізнесі;</li>
+                                        <li>прагнеш здобути якісну освіту в інноваційному університеті.</li>
+                                    </ul>
+                                    <div class="emptySpace50 emptySpace-xs30"></div>
+                                    <p class="programTabTitle as"><b>Навчання на програмі — це</b></p>
+                                    <div class="emptySpace20"></div>
+                                    <ul>
+                                        <li>системний підхід до сталого розвитку організації;</li>
+                                        <li>поглиблення розуміння глобальних суспільних процесів;</li>
+                                        <li>навчання з експертами-практиками з управлінського розвитку;</li>
+                                        <li>сприяння фінансовій стабільності організації через прикладну дипломну роботу;</li>
+                                        <li>нові партнерства з колегами з різних куточків України;</li>
+                                        <li>надихаючі зустрічі з лідерами думок;</li>
+                                        <li>можливість взяти участь в навчальній поїздці за кордон.</li>
+                                    </ul>
+                                    <div class="emptySpace50 emptySpace-xs30"></div>
+                                </div>
+                            </div>
+                            <div class="dean whiteCard">
+                                <div class="col-lg-3 col-md-6 col-sm-5 col-xs-10">
+                                    <div class="deanImg" style="background-image: url(img/news-img3.jpg);"></div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-5 col-xs-10">
+                                    <div class="deanName">
+                                        <div class="deanNameInner">
+                                            <span class="large as"><b>Наталія Бордун</b></span>
+                                            <span>Декан-засновник</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-5 col-xs-10">
+                                    <div class="deanMail">
+                                        <a href="mailto:okosar@lvbs.com.ua"><span></span>okosar@lvbs.com.ua</a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6 col-sm-5 col-xs-10">
+                                    <div class="deanTel">
+                                        <a href="tel:+380504332373"><span></span>+380504332373</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab content 1-END -->
+                        <!-- Tab content 2-START -->
+                        <div class="tabEntry">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="cources simpleArticle small">
+                                        <h6 class="programTabTitle as"><b>Вступ до управління неприбутковими організаціями</b></h6>
+                                        <p>Цей курс дає студентам розуміння історичного, політичного, юридичного, етичного та соціального середовища, в якому неприбуткові організації діють в Україні. В рамках курсу особлива увага приділяється огляду основних викликів сучасної державної політики, з якими громадські організації стикаються у своїй щоденній діяльності. Під час курсу розглядається визначення поняття організації, її функції, види неприбуткових організацій. Також детально аналізується громадська організація, як структурний елемент третього сектору, визначається класифікація НДО, характеристики за видами та структурою управлінської діяльності.</p>
+                                        <div class="emptySpace35 emptySpace-sm15"></div>
+                                        <div class="courcesBanner imgRadius" style="background-image: url(img/cources.jpg);"></div>
+                                        <div class="emptySpace70 emptySpace-sm40"></div>
+                                        <h6 class="programTabTitle as"><b>Стратегічне управління</b></h6>
+                                        <p>Курс дає розуміння важливості планування в життєдіяльності організації та передбачає формування у студентів навичок, необхідних для прийняття обґрунтованих управлінських рішень. У рамках курсу слухачі навчаються визначати стратегію розвитку організації на основі динамічної гармонізації внутрішніх та зовнішніх факторів, проводити аналіз поточних ситуацій, шукати і застосовувати нові способи та сфери реалізації потенціалу організацій і їхніх членів за нових умов. Поряд із розглядом теоретичних аспектів управління значну увагу курсу зосереджено на освоєнні практичних підходів та інструментів менеджменту, здобутті навиків операційного планування, аналізу та оцінювання ідей, ризиків, можливостей.</p>
+                                        <div class="emptySpace40 emptySpace-sm15"></div>
+                                        <div class="courcesGallery row">
+                                            <div class="col-md-4 col-sm-5 col-xs-8">
+                                                <div class="courcesGalleryItem" data-img="0" data-rel="img-popup">
+                                                    <div style="background-image: url(img/cources-item_1.jpg);"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-5 col-xs-8">
+                                                <div class="courcesGalleryItem" data-img="1" data-rel="img-popup">
+                                                    <div style="background-image: url(img/cources-item_2.jpg);"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-5 col-xs-8">
+                                                <div class="courcesGalleryItem" data-img="2" data-rel="img-popup">
+                                                    <div style="background-image: url(img/cources-item_3.jpg);"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-5 col-xs-8">
+                                                <div class="courcesGalleryItem" data-img="3" data-rel="img-popup">
+                                                    <div style="background-image: url(img/cources-item_4.jpg);"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-5 col-xs-8">
+                                                <div class="courcesGalleryItem" data-img="4" data-rel="img-popup">
+                                                    <div style="background-image: url(img/cources-item_5.jpg);"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-5 col-xs-8">
+                                                <div class="courcesGalleryItem" data-img="5" data-rel="img-popup">
+                                                    <div style="background-image: url(img/cources-item_6.jpg);"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-5 col-xs-8">
+                                                <div class="courcesGalleryItem" data-img="6" data-rel="img-popup">
+                                                    <div style="background-image: url(img/cources-item_7.jpg);"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-5 col-xs-8">
+                                                <div class="courcesGalleryItem" data-img="7" data-rel="img-popup">
+                                                    <div style="background-image: url(img/cources-item_8.jpg);"></div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 col-sm-5 col-xs-8">
+                                                <div class="courcesGalleryItem" data-img="8" data-rel="img-popup">
+                                                    <div style="background-image: url(img/cources-item_9.jpg);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="emptySpace40"></div>
+                                        <h6 class="programTabTitle as"><b>Комунікації в неприбутковому секторі</b></h6>
+                                        <p>Курс розкриває роль та специфіку функціонування комунікацій у неприбутковому секторі. Мета курсу – сформувати у студентів розуміння стратегічного підходу в комунікаційній діяльності, розглянути цінності, інтереси та контексти у стосунку до комунікацій. У рамках курсу студенти вивчають авдиторії повідомлень та інструменти для ведення комунікацій, способи взаємодії елементів комунікації, складають комунікаційні матриці та вибудовують комунікаційні стратегії для своїх організацій. Частину курсу зосереджено на поняттях внутрішніх і зовнішніх комунікацій, PR та його ролі у формуванні репутації організації. Окремий тематичний блок становить вивчення соціальних медіа та можливостей, які вони надають для інформування, співпраці чи будь-якої соціальної активності як в межах однієї організації, сфери, так і для міжсекторальної взаємодії.</p>
+                                        <div class="emptySpace40 emptySpace-sm15"></div>
+                                        <h6 class="programTabTitle as"><b>Управління людським потенціалом</b></h6>
+                                        <p>Курс дає студентам загальне розуміння поняття управління людськими ресурсами та цілісне бачення системи управління людським потенціалом в організації. Розкриває суть та специфіку функціонування підсистем управління людським потенціалом, а також особливості управління людським потенціалом на різних етапах розвитку організації. Особливу увагу курс зосереджує на практичних аспектах управління найманими працівниками та волонтерами в ГО: планування та відбір персоналу, створення мотиваційного середовища, адаптація новачків, засоби ефективної комунікації в команді, методики групових фасилітацій, оцінка та розвиток талантів.</p>
+                                    </div>
+                                    <div class="emptySpace20 emptySpace-sm0"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab content 2-END -->
+                        <!-- Tab content 3-START -->
+                        <div class="tabEntry">
+                            <div class="emptySpace10"></div>
+                            <div class="row clear-3 clear-md-2 teamList">
+                                
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="teamThumbnail">
+                                        <div class="imgWrapper">
+                                            <span class="zoomWrapper">
+                                                <img src="img/teacher.jpg" alt="Teacher portrait photo">
+                                            </span>
+                                        </div>
+                                        <div class="teamInfo small">
+                                            <a href="#"><h5 class="h5 as">Оксана Бакланова</h5></a>
+                                            <p>Експертка з питань стратегічного розвитку та управління змінами</p>
+                                        </div>
+                                    </div>
+                                    <div class="emptySpace60 emptySpace-xs40"></div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="teamThumbnail">
+                                        <div class="imgWrapper">
+                                            <span class="zoomWrapper">
+                                                <img src="img/teacher.jpg" alt="Teacher portrait photo">
+                                            </span>
+                                        </div>
+                                        <div class="teamInfo small">
+                                            <a href="#"><h5 class="h5 as">Христина Павлик</h5></a>
+                                            <p>Кандидат економічних наук, доцент</p>
+                                        </div>
+                                    </div>
+                                    <div class="emptySpace60 emptySpace-xs40"></div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="teamThumbnail">
+                                        <div class="imgWrapper">
+                                            <span class="zoomWrapper">
+                                                <img src="img/teacher.jpg" alt="Teacher portrait photo">
+                                            </span>
+                                        </div>
+                                        <div class="teamInfo small">
+                                            <a href="#"><h5 class="h5 as">Вікторія Бринза</h5></a>
+                                            <p>Магістр соціології та політології Фрайбурзького університету Альберта та Людвіга</p>
+                                        </div>
+                                    </div>
+                                    <div class="emptySpace60 emptySpace-xs40"></div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="teamThumbnail">
+                                        <div class="imgWrapper">
+                                            <span class="zoomWrapper">
+                                                <img src="img/teacher.jpg" alt="Teacher portrait photo">
+                                            </span>
+                                        </div>
+                                        <div class="teamInfo small">
+                                            <a href="#"><h5 class="h5 as">Ірина Купецька</h5></a>
+                                            <p>Фінансовий директор</p>
+                                        </div>
+                                    </div>
+                                    <div class="emptySpace60 emptySpace-xs40"></div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="teamThumbnail">
+                                        <div class="imgWrapper">
+                                            <span class="zoomWrapper">
+                                                <img src="img/teacher.jpg" alt="Teacher portrait photo">
+                                            </span>
+                                        </div>
+                                        <div class="teamInfo small">
+                                            <a href="#"><h5 class="h5 as">Анастасія Маркуц</h5></a>
+                                            <p>Академічний директор програми MSc in Techology Management</p>
+                                        </div>
+                                    </div>
+                                    <div class="emptySpace60 emptySpace-xs40"></div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="teamThumbnail">
+                                        <div class="imgWrapper">
+                                            <span class="zoomWrapper">
+                                                <img src="img/teacher.jpg" alt="Teacher portrait photo">
+                                            </span>
+                                        </div>
+                                        <div class="teamInfo small">
+                                            <a href="#"><h5 class="h5 as">Ольга Доля</h5></a>
+                                            <p>Керівник програм управлінського розвитку</p>
+                                        </div>
+                                    </div>
+                                    <div class="emptySpace60 emptySpace-xs40"></div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="teamThumbnail">
+                                        <div class="imgWrapper">
+                                            <span class="zoomWrapper">
+                                                <img src="img/teacher.jpg" alt="Teacher portrait photo">
+                                            </span>
+                                        </div>
+                                        <div class="teamInfo small">
+                                            <a href="#"><h5 class="h5 as">Ірина Купецька</h5></a>
+                                            <p>Фінансовий директор</p>
+                                        </div>
+                                    </div>
+                                    <div class="emptySpace0 emptySpace-md60 emptySpace-xs40"></div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="teamThumbnail">
+                                        <div class="imgWrapper">
+                                            <span class="zoomWrapper">
+                                                <img src="img/teacher.jpg" alt="Teacher portrait photo">
+                                            </span>
+                                        </div>
+                                        <div class="teamInfo small">
+                                            <a href="#"><h5 class="h5 as">Анастасія Маркуц</h5></a>
+                                            <p>Академічний директор програми MSc in Techology Management</p>
+                                        </div>
+                                    </div>
+                                    <div class="emptySpace0 emptySpace-md60 emptySpace-xs40"></div>
+                                </div>
+
+                                <div class="col-sm-6 col-lg-4">
+                                    <div class="teamThumbnail">
+                                        <div class="imgWrapper">
+                                            <span class="zoomWrapper">
+                                                <img src="img/teacher.jpg" alt="Teacher portrait photo">
+                                            </span>
+                                        </div>
+                                        <div class="teamInfo small">
+                                            <a href="#"><h5 class="h5 as">Ольга Доля</h5></a>
+                                            <p>Керівник програм управлінського розвитку</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                        <!-- Tab content 3-END -->
+                        <!-- Tab content 4-START -->
+                        <div class="tabEntry">
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="cources simpleArticle small">
+                                        <h6 class="programTabTitle as"><b>Аби поступити на програму, потрібно здійснити наступні кроки</b></h6>
+                                        <p>Крок 1. Заповніть аплікаційну форму (у вкладенні).
+                                            <br> Крок 2. Зніміть мотиваційне відео на тему «Як я будую громадянське суспільство». Відео має демонструвати ваше розуміння лідерства, громадянського суспільства, ролі людей у вирішенні локальних проблем та пояснювати вашу мотивацію до навчання на магістерській програмі.</p>
+                                        <div class="emptySpace40 emptySpace-sm15"></div>
+                                        <div class="programVideo" style="background-image: url(img/about-img2.jpg);">
+                                            <a href="#" data-video="https://www.youtube.com/embed/Vs5Tytq4yTY?rel=0&autoplay=1" class="open-video play">
+                                                    <span></span>
+                                                    <span></span>
+                                                    <span></span>
+                                                </a>
+                                        </div>
+                                        <div class="emptySpace70 emptySpace-sm40"></div>
+                                        <h6 class="programTabTitle as"><b>Перелік документів, які треба додати до приймальної комісії:</b></h6>
+                                        <ul>
+                                            <li>Диплом державного зразка про здобутий освітньо-кваліфікаційний рівень бакалавра, спеціаліста, магістра;</li>
+                                            <li>Копія ідентифікаційного коду;</li>
+                                            <li>Шість кольорових фотокарток розміром 3х4 см;</li>
+                                            <li>Копія військового квитка або приписного свідоцтва;</li>
+                                            <li>Копія документа, що посвідчує особу та громадянство (паспорт громадянина України (1, 2, 11 сторінки);</li>
+                                        </ul>
+                                    </div>
+                                    <div class="emptySpace20 emptySpace-sm0"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Tab content 4-END -->
+                    </div>
+                    <!-- Tab content wrapper-END -->
+                </div>
+            </div>
+        </section>
+        <div class="emptySpace130 emptySpace-sm65 emptySpace-xs50"></div>
+        <footer>
+            <div class="container">
+                <div class="emptySpace40 emptySpace-md65 emptySpace-xs50"></div>
+                <div class="row clear-sm2">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="logo">
+                            <a href="index.html" target="_blank">
+                                <img src="img/uku.png" alt="uku-logo">
+                            </a>
+                            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                        </div>
+                        <div class="emptySpace20"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                        <div class="emptySpace-sm30"></div>
+                    </div>
+                    <div class="col-lg-3 col-md-2 col-sm-6 col-xs-12">
+                        <div class="footerInfo small">
+                            <h6 class="h6 as"><b>ІЛУ</b></h6>
+                            <a href="about.html">Про нас</a>
+                            <a href="programs.html">Програми</a>
+                            <a href="community.html">Спільнота випускників</a>
+                            <a href="resource.html">Ресурсний центр</a>
+                        </div>
+                        <div class="emptySpace-sm30"></div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="footerInfo small">
+                            <h6 class="h6 as"><b>Адреса</b></h6>
+                            <p>Український Католицький Університет
+                                <br> вул. Козельницька, 2а, офіс 310
+                                <br> Львів 79026, Україна</p>
+                            <a class="colorLink" href="mailto:ilm@ucu.edu.ua">ilm@ucu.edu.ua</a>
+                        </div>
+                        <div class="emptySpace-xs30"></div>
+                    </div>
+                    <div class="col-lg-3 col-md-2 col-sm-6 col-xs-12">
+                        <div class="footerInfo small">
+                            <h6 class="h6 as"><b>Телефон</b></h6>
+                            <a href="tel:+380322409945">+38 (032) 240-99-45</a>
+                            <a href="tel:+380932060310">+38 (093) 20-60-310</a>
+                            <div class="emptySpace15"></div>
+                            <div class="socialWrapper">
+                                <a class="fb" href="https://www.facebook.com/" target="_blank">
+                                	<img src="fonts/svg-icons/facebook.svg" alt="">
+                                </a>
+                                <a class="yt" href="https://www.youtube.com" target="_blank">
+                                	<img src="fonts/svg-icons/youtube.svg" alt="">
+                                </a>
+                                <a class="ist" href="https://www.instagram.com/" target="_blank">
+                                	<img src="fonts/svg-icons/instagram.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="emptySpace55 emptySpace-xs35"></div>
+                        <div class="footerCopy">
+                            <span class="copy">© Інститут лідертсва та управління</span>
+                            <a href="http://redstone.media/" title="Створення сайтів">Створення сайтів <span>REDSTONE</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="popupWrapper">
+        <div class="bgLayer"></div>
+        <!--    Gallery-START    -->
+        <div class="popupContent courcesGalleryPopup" data-rel="img-popup">
+            <div class="layerClose"></div>
+            <div class="popupContainer size2">
+                <!-- Popup content-START -->
+                <div class="popupWrapper">
+                    <div class="container">
+                        <div class="layerClose"></div>
+                        <div class="swiper-container" data-loop="0">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div>
+                                        <img src="img/cources-img_1.jpg" alt="Photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <img src="img/cources-img_2.jpg" alt="Photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <img src="img/cources-img_3.jpg" alt="Photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <img src="img/cources-img_4.jpg" alt="Photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <img src="img/cources-img_5.jpg" alt="Photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <img src="img/cources-img_6.jpg" alt="Photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <img src="img/cources-img_7.jpg" alt="Photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <img src="img/cources-img_8.jpg" alt="Photo">
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div>
+                                        <img src="img/cources-img_9.jpg" alt="Photo">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-pagination swiper-pagination-white"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Popup content-END -->
+                <!--    Popup close button-START    -->
+                <div class="buttonClose">
+                    <span></span><span></span>
+                </div>
+                <!--    Popup close button-END  -->
+            </div>
+        </div>
+        <!--    Gallery-END  -->
+        <!--    Video-START    -->
+        <div class="popupContent" data-rel="videoPopup">
+            <div class="layerClose"></div>
+            <div class="popupContainer">
+                <!-- Popup content-START -->
+                <div class="popupVideoWrapper"></div>
+                <!-- Popup content-END -->
+                <!--    Popup close button-START    -->
+                <div class="buttonClose">
+                    <span></span><span></span>
+                </div>
+                <!--    Popup close button-END  -->
+            </div>
+        </div>
+        <!--    Video-END  -->
+    </div>
+    <!--    Styles-START    -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--    Styles-END  -->
+    <!-- Fonts-START -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+    <!-- Fonts-END -->
+    <!--    Scripts-START   -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/SmoothScroll.js"></script>
+    <script src="js/global.js"></script>
+    <!--    Scripts-END     -->
+    <!-- Map-START-->
+    <script language="javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9CXLB6tTD94qL3Jdxbesrx9Cj6fUUumE&sensor=true&amp;v=3&amp;language=en"></script>
+    <script src="js/map.js"></script>
+    <!-- Map-END-->
+</body>
+
+</html>

@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+   
+    <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>ILM</title>
+    
+    <style>
+        #loader-wrapper {position: fixed;left: 0;top: -100px;right: 0;bottom: -100px;background: #fff;z-index: 100;}
+        body:not(.mobile)::-webkit-scrollbar {width: 8px;}
+        body:not(.mobile)::-webkit-scrollbar-track {background: rgba(192, 192, 192, .7); width: 3px;}
+        body:not(.mobile)::-webkit-scrollbar-thumb {background: linear-gradient(to bottom,#015a9e 0,#0177d1 51%,#015a9e 100%);width: 3px;}
+    </style>
+    
+</head>
+
+<body>
+    <!-- LOADER -->
+    <div id="loader-wrapper"></div>
+    <div id="content-block">
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 headerFlex">
+                        <div class="logo">
+                            <a href="index.html" class="imgWrapper"><img src="img/logo.png" alt="logo"></a>
+                        </div>
+                        <div class="hamburger hidden-lg">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="headerNav">
+                            <nav>
+                                <ul>
+                                    <li class="dropDown">
+                                        <p class="active">Про нас</p>
+                                        <i></i>
+                                        <ul>
+                                            <li>
+                                                <a href="about.html">
+                                                  <span class="imgWrapper">
+                                                   <img src="svg/newspaper.svg" alt="newspaper icon">
+                                               </span>
+                                               <span>Про ІЛУ</span>
+                                           </a>
+                                       </li>
+                                       <li>
+                                          <a href="about.html">
+                                            <span class="imgWrapper">
+                                               <img src="svg/graduation-cap.svg" alt="graduation cap icon">
+                                           </span>
+                                           <span>Напрямки ІЛУ</span>
+                                       </a>
+                                   </li>
+                                   <li>
+                                    <a href="about.html">
+                                      <span class="imgWrapper">
+                                         <img src="svg/banknote.svg" alt="banknote icon">
+                                     </span>
+                                     <span>Підтримай ІЛУ</span>
+                                 </a>
+                             </li>
+                         </ul>
+                     </li>
+                     <li><a href="programs.html">Програми ІЛУ</a></li>
+                     <li><a href="community.html">Спільнота ІЛУ</a></li>
+                     <li><a href="resource.html">Ресурсний центр</a></li>
+                 </ul>
+             </nav>
+             <div class="headerDetail">
+                <div class="pageLanguage">
+                    <a class="active" href="#">UA</a>
+                    <a href="#">EN</a>
+                </div>
+            </div>
+            <div class="headerSearch">
+                <svg id="search" enable-background="new 0 0 56.966 56.966" version="1.1" viewBox="0 0 56.966 56.966" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m55.146 51.887l-13.558-14.101c3.486-4.144 5.396-9.358 5.396-14.786 0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c0.571 0.593 1.339 0.92 2.162 0.92 0.779 0 1.518-0.297 2.079-0.837 1.192-1.147 1.23-3.049 0.083-4.242zm-31.162-45.887c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"/>
+                </svg>
+                <form class="searchElement">
+                    <div class="wrap">
+                        <svg class="search" enable-background="new 0 0 56.966 56.966" version="1.1" viewBox="0 0 56.966 56.966" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m55.146 51.887l-13.558-14.101c3.486-4.144 5.396-9.358 5.396-14.786 0-12.682-10.318-23-23-23s-23 10.318-23 23 10.318 23 23 23c4.761 0 9.298-1.436 13.177-4.162l13.661 14.208c0.571 0.593 1.339 0.92 2.162 0.92 0.779 0 1.518-0.297 2.079-0.837 1.192-1.147 1.23-3.049 0.083-4.242zm-31.162-45.887c9.374 0 17 7.626 17 17s-7.626 17-17 17-17-7.626-17-17 7.626-17 17-17z"/>
+                        </svg>
+                        <input type="search" name="search" placeholder="Пошук" class="simpleInput">
+                        <button class="button typeLg" type="button">Пошук</button>
+                        <svg id="close" enable-background="new 0 0 64 64" version="1.1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                            <path d="m28.941 31.786l-28.328 28.328c-0.787 0.787-0.787 2.062 0 2.849 0.393 0.394 0.909 0.59 1.424 0.59 0.516 0 1.031-0.196 1.424-0.59l28.541-28.541 28.541 28.541c0.394 0.394 0.909 0.59 1.424 0.59s1.031-0.196 1.424-0.59c0.787-0.787 0.787-2.062 0-2.849l-28.327-28.328 28.346-28.348c0.787-0.787 0.787-2.062 0-2.849-0.787-0.786-2.062-0.786-2.848 0l-28.559 28.561-28.562-28.56c-0.787-0.786-2.061-0.786-2.848 0-0.787 0.787-0.787 2.062 0 2.849l28.348 28.347z"/>
+                        </svg>
+                    </div>
+                </form>
+            </div>
+            <a href="#" class="button typeXs">Підтримати ІЛУ</a>
+        </div>
+        </div>
+        </div>
+        </div>
+        </header>
+        <section class="community">
+            <div class="emptySpace20"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="breadCrumbs small">
+                            <a href="index.html">Головна</a>
+                            <span> >> </span>
+                            <a href="community.html">Спільнота ІЛУ</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="emptySpace90 emptySpace-sm65 emptySpace-xs50"></div>
+                <div class="row tabsBlock">
+                    <!-- Tab menu-START -->
+                    <div class="col-sm-12 col-md-3">
+                        <div class="mobileTabMenu">
+                            <div class="h5 h5 as"><b>Про програму</b> <i></i></div>
+                        </div>
+                        <div class="tabMenuWrapper stickyMenu">
+                            <h5 class="h5 as tabMenu active"><a href="#aboutCommunity" class="tabLink">Про спільноту</a></h5>
+                            <h5 class="h5 as tabMenu"><a href="#graduates" class="tabLink">Випускники ІЛУ</a></h5>
+                        </div>
+                        <div class="emptySpace-sm65 emptySpace-xs50"></div>
+                    </div>
+                    <!-- Tab menu-END -->
+                    <!-- Tab content wrapper-START -->
+                    <div class="col-sm-12 col-md-9">
+                        <!-- Tab content 1-START -->
+                        <div id="aboutCommunity" class="tabEntry" style="display: block;">
+                            <div class="sectionTitle">
+                                <h1 class="h3 as"><b>Про спільноту</b></h1>
+                                <hr>
+                            </div>
+                            <div class="emptySpace70 emptySpace-sm65 emptySpace-xs40"></div>
+                            <div class="row">
+                                <div class="col-xs-12">
+                                    <div class="communityCard whiteCard orangeDecorAngle">
+                                        <div class="imgRadius">
+                                            <img src="img/community.jpg" alt="Community photo">
+                                        </div>
+                                        <div class="emptySpace65"></div>
+                                        <div class="communityInfo simpleArticle small blueDecorAngle">
+                                            <h2 class="h4 as"><b>Спільнота випускників</b></h2>
+                                                <p>Це майданчик для спілкування між випускниками довготермінових програм Інституту лідерства та управління, які є лідерами у неприбутковому секторі Україні та у Церкві та творять громадянське суспільство на засадах моральних принципів.</p>
+                                                <p>Спільнота для випускників – це місце, де кожен випускник має нагоду зустріти підтримку свої ідей, за презентувати свою діяльність,  почути підбадьорення та конструктивну критику, співпрацювати, отримувати нові знання та досвід від експертів у різних галузях.</p>
+                                                <p>Ставши випускником довгострокової програми ІЛУ*, учасники мають можливість брати участь у різноманітних круглих столах, конференціях, зустрічах та інших програмах на пільгових умовах.</p>
+                                                <p>Довгострокові програми ІЛУ: Магістерська програма з управління неприбутковими організаціями, Літня школа лідерства, Політичні студії, Good Governance.</p>
+                                            </div>
+                                            <div class="emptySpace50"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Tab content 1-END -->
+                            </div>
+                            <!-- Tab content 2-START -->
+                            <div id="#graduates" class="tabEntry">
+                                <div class="sectionTitle">
+                                    <h2 class="h3 as"><b>Випускники ІЛУ</b></h2>
+                                    <hr>
+                                </div>
+                                <div class="emptySpace70 emptySpace-sm65 emptySpace-xs40"></div>
+                                <div class="row clear-3 clear-md-2 teamList">
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="teamThumbnail open-popup" data-rel="1">
+                                            <a href="#" class="imgWrapper">
+                                                <span class="zoomWrapper">
+                                                    <img src="img/team-img3.jpg" alt="Portrait photo">
+                                                </span>
+                                                
+                                            </a>
+                                            <div class="teamInfo small">
+                                                <a href="#"><h5 class="h5 as">Наталія Рязан</h5></a>
+                                                <p>2000 - 2005 рр.</p>
+                                            </div>
+                                        </div>
+                                        <div class="emptySpace60 emptySpace-xs40"></div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="teamThumbnail open-popup" data-rel="2">
+                                            <a href="#" class="imgWrapper">
+                                                <span class="zoomWrapper">
+                                                    <img src="img/team-img4.jpg" alt="Portrait photo">
+                                                </span>
+                                                
+                                            </a>
+                                            <div class="teamInfo small">
+                                                <a href="#"><h5 class="h5 as">Ярина Бойчук</h5></a>
+                                                <p>СЕО</p>
+                                            </div>
+                                        </div>
+                                        <div class="emptySpace60 emptySpace-xs40"></div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="teamThumbnail open-popup" data-rel="3">
+                                            <a href="#" class="imgWrapper">
+                                                <span class="zoomWrapper">
+                                                    <img src="img/team-img5.jpg" alt="Portrait photo">
+                                                </span>
+                                                
+                                            </a>
+                                            <div class="teamInfo small">
+                                                <a href="#"><h5 class="h5 as">Роксоляна Вороновська</h5></a>
+                                                <p>Керівник напярмку розвитку</p>
+                                            </div>
+                                        </div>
+                                        <div class="emptySpace60 emptySpace-xs40"></div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="teamThumbnail open-popup" data-rel="4">
+                                            <a href="#" class="imgWrapper">
+                                                <span class="zoomWrapper">
+                                                    <img src="img/team-img7.jpg" alt="Portrait photo">
+                                                </span>
+                                                
+                                            </a>
+                                            <div class="teamInfo small">
+                                                <a href="#"><h5 class="h5 as">Ірина Купецька</h5></a>
+                                                <p>Фінансовий директор</p>
+                                            </div>
+                                        </div>
+                                        <div class="emptySpace60 emptySpace-xs40"></div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="teamThumbnail open-popup" data-rel="5">
+                                            <a href="#" class="imgWrapper">
+                                                <span class="zoomWrapper">
+                                                    <img src="img/team-img6.jpg" alt="Portrait photo">
+                                                </span>
+                                                
+                                            </a>
+                                            <div class="teamInfo small">
+                                                <a href="#"><h5 class="h5 as">Анастасія Маркуц</h5></a>
+                                                <p>Академічний директор програми MSc in Techology Management</p>
+                                            </div>
+                                        </div>
+                                        <div class="emptySpace60 emptySpace-xs40"></div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="teamThumbnail open-popup" data-rel="6">
+                                            <a href="#" class="imgWrapper">
+                                                <span class="zoomWrapper">
+                                                    <img src="img/team-img9.jpg" alt="Portrait photo">
+                                                </span>
+                                                
+                                            </a>
+                                            <div class="teamInfo small">
+                                                <a href="#"><h5 class="h5 as">Ольга Доля</h5></a>
+                                                <p>Керівник програм управлінського розвитку</p>
+                                            </div>
+                                        </div>
+                                        <div class="emptySpace60 emptySpace-xs40"></div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="teamThumbnail open-popup" data-rel="7">
+                                            <a href="#" class="imgWrapper">
+                                                <span class="zoomWrapper">
+                                                    <img src="img/team-img8.jpg" alt="Portrait photo">
+                                                </span>
+                                                
+                                            </a>
+                                            <div class="teamInfo small">
+                                                <a href="#"><h5 class="h5 as">Ірина Купецька</h5></a>
+                                                <p>Фінансовий директор</p>
+                                            </div>
+                                        </div>
+                                        <div class="emptySpace0 emptySpace-md60 emptySpace-xs40"></div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="teamThumbnail open-popup" data-rel="8">
+                                            <a href="#" class="imgWrapper">
+                                                <span class="zoomWrapper">
+                                                    <img src="img/team-img11.jpg" alt="Portrait photo">
+                                                </span>
+                                                
+                                            </a>
+                                            <div class="teamInfo small">
+                                                <a href="#"><h5 class="h5 as">Анастасія Маркуц</h5></a>
+                                                <p>Академічний директор програми MSc in Techology Management</p>
+                                            </div>
+                                        </div>
+                                        <div class="emptySpace0 emptySpace-md60 emptySpace-xs40"></div>
+                                    </div>
+                                    <div class="col-sm-6 col-lg-4">
+                                        <div class="teamThumbnail open-popup" data-rel="9">
+                                            <a href="#" class="imgWrapper">
+                                                <span class="zoomWrapper">
+                                                    <img src="img/team-img10.jpg" alt="Portrait photo">
+                                                </span>          
+                                            </a>
+                                            <div class="teamInfo small">
+                                                <a href="#"><h5 class="h5 as">Ольга Доля</h5></a>
+                                                <p>Керівник програм управлінського розвитку</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                            <!-- Tab content 2-END -->
+                        </div>
+                        <!-- Tab content wrapper-END -->
+                    </div>
+            </div>
+        </section>
+        <div class="emptySpace125 emptySpace-sm65 emptySpace-xs50"></div>
+        <footer>
+            <div class="container">
+                <div class="emptySpace40 emptySpace-md65 emptySpace-xs50"></div>
+                <div class="row clear-sm2">
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="logo">
+                            <a href="index.html" target="_blank">
+                                <img src="img/uku.png" alt="uku-logo">
+                            </a>
+                            <a href="index.html"><img src="img/logo.png" alt="logo"></a>
+                        </div>
+                        <div class="emptySpace20"></div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                        <div class="emptySpace-sm30"></div>
+                    </div>
+                    <div class="col-lg-3 col-md-2 col-sm-6 col-xs-12">
+                        <div class="footerInfo small">
+                            <h6 class="h6 as"><b>ІЛУ</b></h6>
+                            <a href="about.html">Про нас</a>
+                            <a href="programs.html">Програми</a>
+                            <a href="community.html">Спільнота випускників</a>
+                            <a href="resource.html">Ресурсний центр</a>
+                        </div>
+                        <div class="emptySpace-sm30"></div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                        <div class="footerInfo small">
+                            <h6 class="h6 as"><b>Адреса</b></h6>
+                            <p>Український Католицький Університет
+                                <br> вул. Козельницька, 2а, офіс 310
+                                <br> Львів 79026, Україна</p>
+                            <a class="colorLink" href="mailto:ilm@ucu.edu.ua">ilm@ucu.edu.ua</a>
+                        </div>
+                        <div class="emptySpace-xs30"></div>
+                    </div>
+                    <div class="col-lg-3 col-md-2 col-sm-6 col-xs-12">
+                        <div class="footerInfo small">
+                            <h6 class="h6 as"><b>Телефон</b></h6>
+                            <a href="tel:+380322409945">+38 (032) 240-99-45</a>
+                            <a href="tel:+380932060310">+38 (093) 20-60-310</a>
+                            <div class="emptySpace15"></div>
+                            <div class="socialWrapper">
+                                <a class="fb" href="https://www.facebook.com/" target="_blank">
+                                	<img src="fonts/svg-icons/facebook.svg" alt="">
+                                </a>
+                                <a class="yt" href="https://www.youtube.com" target="_blank">
+                                	<img src="fonts/svg-icons/youtube.svg" alt="">
+                                </a>
+                                <a class="ist" href="https://www.instagram.com/" target="_blank">
+                                	<img src="fonts/svg-icons/instagram.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <div class="emptySpace55 emptySpace-xs35"></div>
+                        <div class="footerCopy">
+                            <span class="copy">© Інститут лідертсва та управління</span>
+                            <a href="http://redstone.media/" title="Створення сайтів">Створення сайтів <span>REDSTONE</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div class="popupWrapper" id="programItemPopup">
+                <div class="bgLayer">
+                    <!-- popupItem #1 -->
+                    <div class="popupContent" data-rel="1">
+                        <div class="layerClose"></div>
+                        <div class="popupContainer size2">
+                            <!-- Popup content-START -->
+                            <div class="teamItem imgRadius">
+                                <div class="row">
+
+                                    <div class="col-sm-5">
+                                        <div class="teamItemImg">
+                                            <img src="img/team-img3.jpg" alt="Portrait photo">
+                                            <a href="mailto:nbordun@ucu.edu.ua"><span></span>nbordun@ucu.edu.ua</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">
+                                        <div class="teamItemInfo">
+                                            <div class="emptySpace20"></div>
+                                            <h6 class="h5 as"><b>Наталія Бордун</b></h6>
+                                            <span>Декан-засновник</span>
+                                            <div class="emptySpace20"></div>
+                                            <p>Директор Інституту лідерства та управління Українського Католицького Університету. В минулому заступник керівника Центру мирянського лідерства УКУ (2004-2009р.р.) та координатор мережі майстерень для осіб розумово-неповносправних Центру Емаус (2002-2004р.р.), вчитель математики Львівської академічної гімназії (1996-2003р.).</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>Вищу освіту здобула у Львівському національному університеті імені Івана Франка за спеціальністю математик. Має понад 18 років викладацького досвіду. Тренер та консультант в сфері організаційного розвитку.</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>У 2001-2004 рр. працювала директором програм МВА Львівського інституту менеджменту. З 2004 до 2007 – директором програм MBA в Києво-Могилянській бізнес-школі (kmbs)</p>
+                                            <div class="emptySpace20"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--    Popup close button-START    -->
+                                <div class="buttonClose">
+                                    <span></span><span></span>
+                                </div>
+                                <!--    Popup close button-END  -->
+                            </div>
+                            <!-- Popup content-END -->
+                        </div>
+                    </div>
+                    <!-- popupItem #2 -->
+                    <div class="popupContent" data-rel="2">
+                        <div class="layerClose"></div>
+                        <div class="popupContainer size2">
+                            <!-- Popup content-START -->
+                            <div class="teamItem imgRadius">
+                                <div class="row">
+
+                                    <div class="col-sm-5">
+                                        <div class="teamItemImg">
+                                            <img src="img/team-img4.jpg" alt="Portrait photo">
+                                            <a href="mailto:nbordun@ucu.edu.ua"><span></span>nbordun@ucu.edu.ua</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">
+                                        <div class="teamItemInfo">
+                                            <div class="emptySpace20"></div>
+                                            <h6 class="h5 as"><b>Наталія Бордун</b></h6>
+                                            <span>Декан-засновник</span>
+                                            <div class="emptySpace20"></div>
+                                            <p>Директор Інституту лідерства та управління Українського Католицького Університету. В минулому заступник керівника Центру мирянського лідерства УКУ (2004-2009р.р.) та координатор мережі майстерень для осіб розумово-неповносправних Центру Емаус (2002-2004р.р.), вчитель математики Львівської академічної гімназії (1996-2003р.).</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>Вищу освіту здобула у Львівському національному університеті імені Івана Франка за спеціальністю математик. Має понад 18 років викладацького досвіду. Тренер та консультант в сфері організаційного розвитку.</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>У 2001-2004 рр. працювала директором програм МВА Львівського інституту менеджменту. З 2004 до 2007 – директором програм MBA в Києво-Могилянській бізнес-школі (kmbs)</p>
+                                            <div class="emptySpace20"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--    Popup close button-START    -->
+                                <div class="buttonClose">
+                                    <span></span><span></span>
+                                </div>
+                                <!--    Popup close button-END  -->
+                            </div>
+                            <!-- Popup content-END -->
+                        </div>
+                    </div>
+                    <!-- popupItem #3 -->
+                    <div class="popupContent" data-rel="3">
+                        <div class="layerClose"></div>
+                        <div class="popupContainer size2">
+                            <!-- Popup content-START -->
+                            <div class="teamItem imgRadius">
+                                <div class="row">
+
+                                    <div class="col-sm-5">
+                                        <div class="teamItemImg">
+                                            <img src="img/team-img5.jpg" alt="Portrait photo">
+                                            <a href="mailto:nbordun@ucu.edu.ua"><span></span>nbordun@ucu.edu.ua</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">
+                                        <div class="teamItemInfo">
+                                            <div class="emptySpace20"></div>
+                                            <h6 class="h5 as"><b>Наталія Бордун</b></h6>
+                                            <span>Декан-засновник</span>
+                                            <div class="emptySpace20"></div>
+                                            <p>Директор Інституту лідерства та управління Українського Католицького Університету. В минулому заступник керівника Центру мирянського лідерства УКУ (2004-2009р.р.) та координатор мережі майстерень для осіб розумово-неповносправних Центру Емаус (2002-2004р.р.), вчитель математики Львівської академічної гімназії (1996-2003р.).</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>Вищу освіту здобула у Львівському національному університеті імені Івана Франка за спеціальністю математик. Має понад 18 років викладацького досвіду. Тренер та консультант в сфері організаційного розвитку.</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>У 2001-2004 рр. працювала директором програм МВА Львівського інституту менеджменту. З 2004 до 2007 – директором програм MBA в Києво-Могилянській бізнес-школі (kmbs)</p>
+                                            <div class="emptySpace20"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--    Popup close button-START    -->
+                                <div class="buttonClose">
+                                    <span></span><span></span>
+                                </div>
+                                <!--    Popup close button-END  -->
+                            </div>
+                            <!-- Popup content-END -->
+                        </div>
+                    </div>
+                    <!-- popupItem #4 -->
+                    <div class="popupContent" data-rel="4">
+                        <div class="layerClose"></div>
+                        <div class="popupContainer size2">
+                            <!-- Popup content-START -->
+                            <div class="teamItem imgRadius">
+                                <div class="row">
+
+                                    <div class="col-sm-5">
+                                        <div class="teamItemImg">
+                                            <img src="img/team-img7.jpg" alt="Portrait photo">
+                                            <a href="mailto:nbordun@ucu.edu.ua"><span></span>nbordun@ucu.edu.ua</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">
+                                        <div class="teamItemInfo">
+                                            <div class="emptySpace20"></div>
+                                            <h6 class="h5 as"><b>Наталія Бордун</b></h6>
+                                            <span>Декан-засновник</span>
+                                            <div class="emptySpace20"></div>
+                                            <p>Директор Інституту лідерства та управління Українського Католицького Університету. В минулому заступник керівника Центру мирянського лідерства УКУ (2004-2009р.р.) та координатор мережі майстерень для осіб розумово-неповносправних Центру Емаус (2002-2004р.р.), вчитель математики Львівської академічної гімназії (1996-2003р.).</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>Вищу освіту здобула у Львівському національному університеті імені Івана Франка за спеціальністю математик. Має понад 18 років викладацького досвіду. Тренер та консультант в сфері організаційного розвитку.</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>У 2001-2004 рр. працювала директором програм МВА Львівського інституту менеджменту. З 2004 до 2007 – директором програм MBA в Києво-Могилянській бізнес-школі (kmbs)</p>
+                                            <div class="emptySpace20"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--    Popup close button-START    -->
+                                <div class="buttonClose">
+                                    <span></span><span></span>
+                                </div>
+                                <!--    Popup close button-END  -->
+                            </div>
+                            <!-- Popup content-END -->
+                        </div>
+                    </div>
+                    <!-- popupItem #5 -->
+                    <div class="popupContent" data-rel="5">
+                        <div class="layerClose"></div>
+                        <div class="popupContainer size2">
+                            <!-- Popup content-START -->
+                            <div class="teamItem imgRadius">
+                                <div class="row">
+
+                                    <div class="col-sm-5">
+                                        <div class="teamItemImg">
+                                            <img src="img/team-img6.jpg" alt="Portrait photo">
+                                            <a href="mailto:nbordun@ucu.edu.ua"><span></span>nbordun@ucu.edu.ua</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">
+                                        <div class="teamItemInfo">
+                                            <div class="emptySpace20"></div>
+                                            <h6 class="h5 as"><b>Наталія Бордун</b></h6>
+                                            <span>Декан-засновник</span>
+                                            <div class="emptySpace20"></div>
+                                            <p>Директор Інституту лідерства та управління Українського Католицького Університету. В минулому заступник керівника Центру мирянського лідерства УКУ (2004-2009р.р.) та координатор мережі майстерень для осіб розумово-неповносправних Центру Емаус (2002-2004р.р.), вчитель математики Львівської академічної гімназії (1996-2003р.).</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>Вищу освіту здобула у Львівському національному університеті імені Івана Франка за спеціальністю математик. Має понад 18 років викладацького досвіду. Тренер та консультант в сфері організаційного розвитку.</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>У 2001-2004 рр. працювала директором програм МВА Львівського інституту менеджменту. З 2004 до 2007 – директором програм MBA в Києво-Могилянській бізнес-школі (kmbs)</p>
+                                            <div class="emptySpace20"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--    Popup close button-START    -->
+                                <div class="buttonClose">
+                                    <span></span><span></span>
+                                </div>
+                                <!--    Popup close button-END  -->
+                            </div>
+                            <!-- Popup content-END -->
+                        </div>
+                    </div>
+                    <!-- popupItem #6 -->
+                    <div class="popupContent" data-rel="6">
+                        <div class="layerClose"></div>
+                        <div class="popupContainer size2">
+                            <!-- Popup content-START -->
+                            <div class="teamItem imgRadius">
+                                <div class="row">
+
+                                    <div class="col-sm-5">
+                                        <div class="teamItemImg">
+                                            <img src="img/team-img9.jpg" alt="Portrait photo">
+                                            <a href="mailto:nbordun@ucu.edu.ua"><span></span>nbordun@ucu.edu.ua</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">
+                                        <div class="teamItemInfo">
+                                            <div class="emptySpace20"></div>
+                                            <h6 class="h5 as"><b>Наталія Бордун</b></h6>
+                                            <span>Декан-засновник</span>
+                                            <div class="emptySpace20"></div>
+                                            <p>Директор Інституту лідерства та управління Українського Католицького Університету. В минулому заступник керівника Центру мирянського лідерства УКУ (2004-2009р.р.) та координатор мережі майстерень для осіб розумово-неповносправних Центру Емаус (2002-2004р.р.), вчитель математики Львівської академічної гімназії (1996-2003р.).</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>Вищу освіту здобула у Львівському національному університеті імені Івана Франка за спеціальністю математик. Має понад 18 років викладацького досвіду. Тренер та консультант в сфері організаційного розвитку.</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>У 2001-2004 рр. працювала директором програм МВА Львівського інституту менеджменту. З 2004 до 2007 – директором програм MBA в Києво-Могилянській бізнес-школі (kmbs)</p>
+                                            <div class="emptySpace20"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--    Popup close button-START    -->
+                                <div class="buttonClose">
+                                    <span></span><span></span>
+                                </div>
+                                <!--    Popup close button-END  -->
+                            </div>
+                            <!-- Popup content-END -->
+                        </div>
+                    </div>
+                    <!-- popupItem #7 -->
+                    <div class="popupContent" data-rel="7">
+                        <div class="layerClose"></div>
+                        <div class="popupContainer size2">
+                            <!-- Popup content-START -->
+                            <div class="teamItem imgRadius">
+                                <div class="row">
+
+                                    <div class="col-sm-5">
+                                        <div class="teamItemImg">
+                                            <img src="img/team-img8.jpg" alt="Portrait photo">
+                                            <a href="mailto:nbordun@ucu.edu.ua"><span></span>nbordun@ucu.edu.ua</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">
+                                        <div class="teamItemInfo">
+                                            <div class="emptySpace20"></div>
+                                            <h6 class="h5 as"><b>Наталія Бордун</b></h6>
+                                            <span>Декан-засновник</span>
+                                            <div class="emptySpace20"></div>
+                                            <p>Директор Інституту лідерства та управління Українського Католицького Університету. В минулому заступник керівника Центру мирянського лідерства УКУ (2004-2009р.р.) та координатор мережі майстерень для осіб розумово-неповносправних Центру Емаус (2002-2004р.р.), вчитель математики Львівської академічної гімназії (1996-2003р.).</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>Вищу освіту здобула у Львівському національному університеті імені Івана Франка за спеціальністю математик. Має понад 18 років викладацького досвіду. Тренер та консультант в сфері організаційного розвитку.</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>У 2001-2004 рр. працювала директором програм МВА Львівського інституту менеджменту. З 2004 до 2007 – директором програм MBA в Києво-Могилянській бізнес-школі (kmbs)</p>
+                                            <div class="emptySpace20"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--    Popup close button-START    -->
+                                <div class="buttonClose">
+                                    <span></span><span></span>
+                                </div>
+                                <!--    Popup close button-END  -->
+                            </div>
+                            <!-- Popup content-END -->
+                        </div>
+                    </div>
+                    <!-- popupItem #8 -->
+                    <div class="popupContent" data-rel="8">
+                        <div class="layerClose"></div>
+                        <div class="popupContainer size2">
+                            <!-- Popup content-START -->
+                            <div class="teamItem imgRadius">
+                                <div class="row">
+
+                                    <div class="col-sm-5">
+                                        <div class="teamItemImg">
+                                            <img src="img/team-img11.jpg" alt="Portrait photo">
+                                            <a href="mailto:nbordun@ucu.edu.ua"><span></span>nbordun@ucu.edu.ua</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">
+                                        <div class="teamItemInfo">
+                                            <div class="emptySpace20"></div>
+                                            <h6 class="h5 as"><b>Наталія Бордун</b></h6>
+                                            <span>Декан-засновник</span>
+                                            <div class="emptySpace20"></div>
+                                            <p>Директор Інституту лідерства та управління Українського Католицького Університету. В минулому заступник керівника Центру мирянського лідерства УКУ (2004-2009р.р.) та координатор мережі майстерень для осіб розумово-неповносправних Центру Емаус (2002-2004р.р.), вчитель математики Львівської академічної гімназії (1996-2003р.).</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>Вищу освіту здобула у Львівському національному університеті імені Івана Франка за спеціальністю математик. Має понад 18 років викладацького досвіду. Тренер та консультант в сфері організаційного розвитку.</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>У 2001-2004 рр. працювала директором програм МВА Львівського інституту менеджменту. З 2004 до 2007 – директором програм MBA в Києво-Могилянській бізнес-школі (kmbs)</p>
+                                            <div class="emptySpace20"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--    Popup close button-START    -->
+                                <div class="buttonClose">
+                                    <span></span><span></span>
+                                </div>
+                                <!--    Popup close button-END  -->
+                            </div>
+                            <!-- Popup content-END -->
+                        </div>
+                    </div>
+                    <!-- popupItem #9 -->
+                    <div class="popupContent" data-rel="9">
+                        <div class="layerClose"></div>
+                        <div class="popupContainer size2">
+                            <!-- Popup content-START -->
+                            <div class="teamItem imgRadius">
+                                <div class="row">
+
+                                    <div class="col-sm-5">
+                                        <div class="teamItemImg">
+                                            <img src="img/team-img10.jpg" alt="Portrait photo">
+                                            <a href="mailto:nbordun@ucu.edu.ua"><span></span>nbordun@ucu.edu.ua</a>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-sm-7">
+                                        <div class="teamItemInfo">
+                                            <div class="emptySpace20"></div>
+                                            <h6 class="h5 as"><b>Наталія Бордун</b></h6>
+                                            <span>Декан-засновник</span>
+                                            <div class="emptySpace20"></div>
+                                            <p>Директор Інституту лідерства та управління Українського Католицького Університету. В минулому заступник керівника Центру мирянського лідерства УКУ (2004-2009р.р.) та координатор мережі майстерень для осіб розумово-неповносправних Центру Емаус (2002-2004р.р.), вчитель математики Львівської академічної гімназії (1996-2003р.).</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>Вищу освіту здобула у Львівському національному університеті імені Івана Франка за спеціальністю математик. Має понад 18 років викладацького досвіду. Тренер та консультант в сфері організаційного розвитку.</p>
+                                            <div class="emptySpace20"></div>
+                                            <p>У 2001-2004 рр. працювала директором програм МВА Львівського інституту менеджменту. З 2004 до 2007 – директором програм MBA в Києво-Могилянській бізнес-школі (kmbs)</p>
+                                            <div class="emptySpace20"></div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--    Popup close button-START    -->
+                                <div class="buttonClose">
+                                    <span></span><span></span>
+                                </div>
+                                <!--    Popup close button-END  -->
+                            </div>
+                            <!-- Popup content-END -->
+                        </div>
+                    </div>
+
+                </div>
+                <!--    Video-START    -->
+                <div class="popupContent" data-rel="videoPopup">
+                    <div class="layerClose"></div>
+                    <div class="popupContainer">
+                        <!-- Popup content-START -->
+                        <div class="popupVideoWrapper"></div>
+                        <!-- Popup content-END -->
+                        <!--    Popup close button-START    -->
+                        <div class="buttonClose">
+                            <span></span><span></span>
+                        </div>
+                        <!--    Popup close button-END  -->
+                    </div>
+                </div>
+                <!--    Video-END  -->
+    </div>
+    <!--    Styles-START    -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!--    Styles-END  -->
+    <!-- Fonts-START -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+    <!-- Fonts-END -->
+    <!--    Scripts-START   -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
+    <script src="js/SmoothScroll.js"></script>
+    <script src="js/global.js"></script>
+    <!--    Scripts-END     -->
+    <!-- Map-START-->
+    <script language="javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC9CXLB6tTD94qL3Jdxbesrx9Cj6fUUumE&sensor=true&amp;v=3&amp;language=en"></script>
+    <script src="js/map.js"></script>
+    <!-- Map-END-->
+</body>
+</html>
